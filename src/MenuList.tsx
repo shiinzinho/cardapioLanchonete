@@ -73,6 +73,13 @@ function MenuList(): React.JSX.Element {
                     style={styles.footerIcon}
                     />
                 </TouchableOpacity>
+                
+                <TouchableOpacity>
+                    <Image 
+                    source={require('./assets/images/menuIcon.png')}
+                    style={styles.footerIcon}
+                    />
+                </TouchableOpacity>
             </View>
         </View>
     )
@@ -92,7 +99,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'red',
         alignItems: 'center',
         paddingVertical: 10,
-        paddingHorizontal: 'auto',
+        paddingHorizontal: 40,
         borderRadius: 15
     },
     Text1: {
