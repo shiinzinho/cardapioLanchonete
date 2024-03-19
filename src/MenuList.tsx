@@ -93,7 +93,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         padding: 20,
         marginVertical: 8,
-        marginHorizontal: 16
+        marginHorizontal: 16,
+        borderRadius: 25
     },
     header: {
         backgroundColor: 'red',
