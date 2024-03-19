@@ -29,16 +29,18 @@ const dados: Item[] = [
 
 const renderItem = ({ item }: { item: Item }) => (
     <TouchableOpacity style={styles.item}>
-        <Text style={styles.Text}>{item.nome}</Text>
-        <Text style={styles.Text}>{item.price}</Text>
-        <Text style={styles.Text}>{item.ingredients}</Text>
+        <Text style={styles.Text1}>{item.nome}</Text>
+        <Text style={styles.Text2}>{item.price}</Text>
+        <Text style={styles.Text3}>{item.ingredients}</Text>
         <Image source={item.image} style={styles.ImageIcon}></Image>
     </TouchableOpacity>
 );
 
 function MenuList(): React.JSX.Element {
     return (
+        
         <View style={styles.container}>
+             <ImageBackground source={require('./assets/images/menu.png')} style={styles.imageBackground}>
             <StatusBar backgroundColor='black' barStyle='light-content' />
             <View style={styles.header}>
                 <Text style={styles.headerText}>Cardápio da Lanchonete Lacerda</Text>
@@ -49,6 +51,7 @@ function MenuList(): React.JSX.Element {
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id}
             />
+            </ImageBackground>
                         <View style={styles.footer}>
                 <TouchableOpacity>
                     <Image 
@@ -88,10 +91,22 @@ const styles = StyleSheet.create({
     header: {
         backgroundColor: 'red',
         alignItems: 'center',
-        paddingVertical: 10
+        paddingVertical: 10,
+        paddingHorizontal: 'auto',
+        borderRadius: 15
     },
-    Text: {
+    Text1: {
+        fontSize: 30,
+        fontWeight: '700',
+        color: 'red'
+    },
+    Text2: {
         fontSize: 20,
+        fontWeight: '500',
+        color: 'yellow'
+    },
+    Text3: {
+        fontSize: 15,
         fontWeight: 'bold',
         color: 'white'
     },
@@ -117,6 +132,12 @@ const styles = StyleSheet.create({
         width: 320,
         height: 150
     },
+    imageBackground: {
+        flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center",
+        alignItems: "center"
+      },
 }
 );
 
