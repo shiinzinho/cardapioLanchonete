@@ -136,9 +136,10 @@ const styles = StyleSheet.create({
         height: 30
     },
     ImageIcon: {
-        borderTopWidth: 0.2,
+        marginTop: 20,
         width: 320,
-        height: 150
+        height: 150,
+        borderRadius: 20
     },
     imageBackground: {
         flex: 1,
