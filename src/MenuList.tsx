@@ -41,9 +41,9 @@ function MenuList(): React.JSX.Element {
         
         <View style={styles.container}>
              <ImageBackground source={require('./assets/images/menu.png')} style={styles.imageBackground}>
-            <StatusBar backgroundColor='black' barStyle='light-content' />
+            <StatusBar backgroundColor='#ec3424' barStyle='light-content' />
             <View style={styles.header}>
-                <Text style={styles.headerText}>Cardápio da Lanchonete Lacerda</Text>
+                <Image source={require('./assets/images/lacerda.png')} style={styles.ImageHeader}></Image>
             </View>
             <FlatList
             showsVerticalScrollIndicator={false}
@@ -97,11 +97,10 @@ const styles = StyleSheet.create({
         borderRadius: 25
     },
     header: {
-        backgroundColor: 'red',
+        backgroundColor: '#000',
         alignItems: 'center',
-        paddingVertical: 10,
+        paddingVertical: 1,
         paddingHorizontal: 40,
-        borderRadius: 15
     },
     Text1: {
         fontSize: 30,
@@ -147,6 +146,10 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
       },
+      ImageHeader: {
+        width: 320,
+        height: 150,
+      }
 }
 );
 
