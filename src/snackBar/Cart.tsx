@@ -3,32 +3,34 @@ import { StyleSheet, View, ScrollView, Text, FlatList, Touchable, TouchableOpaci
 
 interface Item {
     id: string,
-    qtd: string,
     nome: string,
+    price: string,
+    qtd: string,
     image: any
 }
 
 const dados: Item[] = [
-    { id: '1', nome: '𝙲𝚕𝚞𝚋 𝚜𝚊𝚗𝚍𝚠𝚒𝚌𝚑', qtd: '1', image: require('../assets/images/ClubSandwich.jpg') },
-    { id: '2', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚌𝚊𝚛𝚗𝚎 𝚊𝚜𝚜𝚊𝚍𝚊', qtd: '0', image: require('../assets/images/CarneAssada.jpg')},
-    { id: '3', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚊𝚝𝚞𝚖', qtd: '0', image: require('../assets/images/Atum.jpg')},
-    { id: '4', nome: '𝚆𝚛𝚊𝚙 𝚟𝚎𝚐𝚎𝚝𝚊𝚛𝚒𝚊𝚗𝚘 𝚌𝚘𝚖 𝚑𝚘𝚖𝚞𝚜', qtd: '0', image: require('../assets/images/Wrap.jpg')},
-    { id: '5', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚜𝚊𝚕𝚊𝚍𝚊 𝚍𝚎 𝚏𝚛𝚊𝚗𝚐𝚘', qtd: '0', image: require('../assets/images/SaladaFrango.jpg')},
-    { id: '6', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚙𝚎𝚛𝚗𝚒𝚕 𝚖𝚊𝚛𝚒𝚗𝚊𝚍𝚘', qtd: '0', image: require('../assets/images/Pernil.jpg')},
-    { id: '7', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚙𝚎𝚒𝚝𝚘 𝚍𝚎 𝚙𝚎𝚛𝚞', qtd: '0', image: require('../assets/images/Peru.jpg')},
-    { id: '8', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚌𝚘𝚜𝚝𝚎𝚕𝚊 𝚍𝚎 𝚙𝚘𝚛𝚌𝚘 𝚌𝚘𝚖 𝚋𝚊𝚛𝚋𝚎𝚌𝚞𝚎', qtd: '1', image: require('../assets/images/Barbecue.jpg')},
-    { id: '9', nome: '𝙱𝙻𝚃', qtd: '0', image: require('../assets/images/BLT.jpg')},
-    { id: '10', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚏𝚛𝚊𝚗𝚐𝚘 𝚐𝚛𝚎𝚕𝚑𝚊𝚍𝚘', qtd: '0', image: require('../assets/images/FrangoGrelhado.jpg')},
-    { id: '11', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚊𝚋𝚊𝚌𝚊𝚝𝚎', qtd: '0', image: require('../assets/images/Abacate.jpg')},
-    { id: '12', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚘𝚟𝚘 𝚎 𝚋𝚊𝚌𝚘𝚗', qtd: '0', image: require('../assets/images/OvoBacon.jpg')},
-    { id: '13', nome: '𝙲𝚑𝚎𝚎𝚜𝚎𝚋𝚞𝚛𝚐𝚎𝚛', qtd: '0', image: require('../assets/images/CheeseBurguer.jpg')},
-    { id: '14', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚏𝚊𝚕𝚊𝚏𝚎𝚕', qtd: '0', image: require('../assets/images/Falafel.jpg')},
-    { id: '15', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚌𝚊𝚙𝚛𝚎𝚜𝚎', qtd: '0', image: require('../assets/images/Caprese.jpg')},
+    { id: '1', nome: '𝙲𝚕𝚞𝚋 𝚜𝚊𝚗𝚍𝚠𝚒𝚌𝚑', qtd: '1', price: '$12', image: require('../assets/images/ClubSandwich.jpg') },
+    { id: '2', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚌𝚊𝚛𝚗𝚎 𝚊𝚜𝚜𝚊𝚍𝚊', price: '$12', qtd: '0', image: require('../assets/images/CarneAssada.jpg')},
+    { id: '3', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚊𝚝𝚞𝚖', qtd: '0', price: '$10', image: require('../assets/images/Atum.jpg')},
+    { id: '4', nome: '𝚆𝚛𝚊𝚙 𝚟𝚎𝚐𝚎𝚝𝚊𝚛𝚒𝚊𝚗𝚘 𝚌𝚘𝚖 𝚑𝚘𝚖𝚞𝚜', qtd: '0', price: '$9', image: require('../assets/images/Wrap.jpg')},
+    { id: '5', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚜𝚊𝚕𝚊𝚍𝚊 𝚍𝚎 𝚏𝚛𝚊𝚗𝚐𝚘', qtd: '0', price: '$14', image: require('../assets/images/SaladaFrango.jpg')},
+    { id: '6', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚙𝚎𝚛𝚗𝚒𝚕 𝚖𝚊𝚛𝚒𝚗𝚊𝚍𝚘', qtd: '0', price: '$13', image: require('../assets/images/Pernil.jpg')},
+    { id: '7', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚙𝚎𝚒𝚝𝚘 𝚍𝚎 𝚙𝚎𝚛𝚞', qtd: '0', price: '$13', image: require('../assets/images/Peru.jpg')},
+    { id: '8', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚌𝚘𝚜𝚝𝚎𝚕𝚊 𝚍𝚎 𝚙𝚘𝚛𝚌𝚘 𝚌𝚘𝚖 𝚋𝚊𝚛𝚋𝚎𝚌𝚞𝚎', qtd: '14', price: '$12', image: require('../assets/images/Barbecue.jpg')},
+    { id: '9', nome: '𝙱𝙻𝚃', qtd: '0', price: '$9', image: require('../assets/images/BLT.jpg')},
+    { id: '10', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚏𝚛𝚊𝚗𝚐𝚘 𝚐𝚛𝚎𝚕𝚑𝚊𝚍𝚘', qtd: '0', price: '$10', image: require('../assets/images/FrangoGrelhado.jpg')},
+    { id: '11', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚊𝚋𝚊𝚌𝚊𝚝𝚎', qtd: '0', price: '$10', image: require('../assets/images/Abacate.jpg')},
+    { id: '12', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚘𝚟𝚘 𝚎 𝚋𝚊𝚌𝚘𝚗', qtd: '0', price: '$8', image: require('../assets/images/OvoBacon.jpg')},
+    { id: '13', nome: '𝙲𝚑𝚎𝚎𝚜𝚎𝚋𝚞𝚛𝚐𝚎𝚛', qtd: '0', price: '$8', image: require('../assets/images/CheeseBurguer.jpg')},
+    { id: '14', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚏𝚊𝚕𝚊𝚏𝚎𝚕', qtd: '0', price: '$11', image: require('../assets/images/Falafel.jpg')},
+    { id: '15', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚌𝚊𝚙𝚛𝚎𝚜𝚎', qtd: '0', price: '$13', image: require('../assets/images/Caprese.jpg')},
 ];
 
 const renderItem = ({ item }: { item: Item }) => (
     <View style={styles.item}>
         <Text style={styles.text1}>{item.nome}</Text>
+        <Text style={styles.text3}>{item.price}</Text>
         <Image source={item.image} style={styles.imageIcon}></Image>
         <TouchableOpacity><Image source={require('../assets/images/subtract.png')} style={styles.subtractIcon}></Image></TouchableOpacity>
         <Text style={styles.text2}>{item.qtd}</Text>
@@ -122,6 +124,12 @@ const styles = StyleSheet.create({
     text2: {
         marginLeft: 147,
         marginTop:-28,
+        fontSize: 20,
+        fontWeight: '500',
+        color: 'white',
+    },
+    text3: {
+        marginTop: 10,
         fontSize: 20,
         fontWeight: '500',
         color: 'yellow',
