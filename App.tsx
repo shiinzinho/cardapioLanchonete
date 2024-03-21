@@ -1,11 +1,11 @@
 import React from "react";
 import { FlatList } from "react-native";
-import FlatListExample from "./src/MenuList";
-import MenuList from "./src/MenuList";
+import MenuList from "./src/snackBar/MenuList";
+import Cart from "./src/snackBar/Cart";
 
 function App(): React.JSX.Element {
   return(
-    <MenuList />
+    <Cart />
   );
 }
 export default App;
