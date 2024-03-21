@@ -99,8 +99,6 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         borderColor: 'red',
         borderWidth: 2,
-        borderBottomWidth:4,
-        borderEndWidth: 4
     },
     header: {
         backgroundColor: '#000',
