@@ -30,7 +30,9 @@ const dados: Item[] = [
 const renderItem = ({ item }: { item: Item }) => (
     <TouchableOpacity style={styles.item}>
         <Text style={styles.Text1}>{item.nome}</Text>
+        <View>
         <Text style={styles.Text2}>{item.price}</Text>
+        </View>
         <Text style={styles.Text3}>{item.ingredients}</Text>
         <Image source={item.image} style={styles.ImageIcon}></Image>
     </TouchableOpacity>
@@ -117,7 +119,7 @@ const styles = StyleSheet.create({
         marginTop:4,
         fontSize: 20,
         fontWeight: '500',
-        color: 'yellow'
+        color: 'yellow',
     },
     Text3: {
         marginTop:8,
