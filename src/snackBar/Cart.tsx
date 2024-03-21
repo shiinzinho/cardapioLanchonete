@@ -32,9 +32,9 @@ const renderItem = ({ item }: { item: Item }) => (
         <View>
         </View>
         <Image source={item.image} style={styles.imageIcon}></Image>
-        <Image source={require('../assets/images/addItem.png')} style={styles.addIcon}></Image>
+        <TouchableOpacity><Image source={require('../assets/images/addItem.png')} style={styles.addIcon}></Image></TouchableOpacity>
         <Text style={styles.text2}>{item.qtd}</Text>
-        <Image source={require('../assets/images/subtract.png')} style={styles.subtractIcon}></Image>
+        <TouchableOpacity><Image source={require('../assets/images/subtract.png')} style={styles.subtractIcon}></Image></TouchableOpacity>
 
     </TouchableOpacity>
 );
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
         borderBottomColor: 'red',
     },
     text2: {
-        marginLeft: 150,
+        marginLeft: 147,
         marginTop:-28,
         fontSize: 20,
         fontWeight: '500',
@@ -150,13 +150,13 @@ const styles = StyleSheet.create({
     addIcon: {
         width: 31,
         height: 31,
-        marginLeft:110,
+        marginLeft: 107,
         
     },
     subtractIcon: {
         width: 30,
         height: 30,
-        marginLeft: 170,
+        marginLeft: 167,
         marginTop: -29.5
     },
     imageIcon: {
