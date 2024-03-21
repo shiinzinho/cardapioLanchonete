@@ -10,21 +10,21 @@ interface Item {
 }
 
 const dados: Item[] = [
-    { id: '1', nome: 'Club sandwich', price: '$12', ingredients: 'Pão de forma, Peito de peru, Bacon, Alface, Tomate', image: require('./assets/images/ClubSandwich.jpg') },
-    { id: '2', nome: 'Sanduíche de carne assada', price: '$12', ingredients: 'Carne bovina, Baguete, Cebola, Tomate, Alface', image: require('./assets/images/CarneAssada.jpg')},
-    { id: '3', nome: 'Sanduíche de atum', price: '$10', ingredients: 'Pão de forma, Atum, Cebola, Aipo, Alface', image: require('./assets/images/Atum.jpg')},
-    { id: '4', nome: 'Wrap vegetariano com homus', price: '$9', ingredients: 'Tortilhas de trigo integral, Alho, Azeite, Limão(suco), Tahine', image: require('./assets/images/Wrap.jpg')},
-    { id: '5', nome: 'Sanduíche de salada de frango', price: '$14', ingredients: 'Baguete, Peito de frango, Aipo, Nozes, Alface', image: require('./assets/images/SaladaFrango.jpg')},
-    { id: '6', nome: 'Sanduíche de pernil marinado', price: '$13', ingredients: 'Baguete, Lombo de porco, Alho, Páprica, Orégano', image: require('./assets/images/Pernil.jpg')},
-    { id: '7', nome: 'Sanduíche de peito de peru', price: '$13', ingredients: 'Pão de forma, Peito de peru, Cebola roxa, Queijo mussarela, Tomate', image: require('./assets/images/Peru.jpg')},
-    { id: '8', nome: 'Sanduíche de costela de porco com barbecue', price: '$14', ingredients: 'Pão de hambúrguer, Costela de porco, Repolho, Molho barbecue, Cebola', image: require('./assets/images/Barbecue.jpg')},
-    { id: '9', nome: 'BLT', price: '$9', ingredients: 'Pão de forma, Bacon, Alface, Tomate, Pimenta', image: require('./assets/images/BLT.jpg')},
-    { id: '10', nome: 'Sanduíche de frango grelhado', price: '$10', ingredients: 'Ciabatta, Peito de frango, Tomate, Alface, Cebola roxa', image: require('./assets/images/FrangoGrelhado.jpg')},
-    { id: '11', nome: 'Sanduíche de abacate', price: '$10', ingredients: 'Pão de forma, Abacate, Alface, Queijo branco, Tomate', image: require('./assets/images/Abacate.jpg')},
-    { id: '12', nome: 'Sanduíche de ovo e bacon', price: '$8', ingredients: 'Pão de hambúrguer, Ovo, Bacon, Queijo mussarela, Manteiga', image: require('./assets/images/OvoBacon.jpg')},
-    { id: '13', nome: 'Cheeseburger', price: '$8', ingredients: 'Pão de hambúrguer, Quijo cheddar, Cebola roxa, Carne de hambúrguer, Picles', image: require('./assets/images/CheeseBurguer.jpg')},
-    { id: '14', nome: 'Sanduíche de falafel', price: '$11', ingredients: 'Pão folha, Alface, Tomate, Pepino, Cebola roxa', image: require('./assets/images/Falafel.jpg')},
-    { id: '15', nome: ' Sanduíche caprese', price: '$13', ingredients: 'Pão italiano, Mussarela de búfala, Tomate, Manjericão, Azeite', image: require('./assets/images/Caprese.jpg')},
+    { id: '1', nome: '𝙲𝚕𝚞𝚋 𝚜𝚊𝚗𝚍𝚠𝚒𝚌𝚑', price: '$12', ingredients: 'Pão de forma, Peito de peru, Bacon, Alface, Tomate', image: require('./assets/images/ClubSandwich.jpg') },
+    { id: '2', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚌𝚊𝚛𝚗𝚎 𝚊𝚜𝚜𝚊𝚍𝚊', price: '$12', ingredients: 'Carne bovina, Baguete, Cebola, Tomate, Alface', image: require('./assets/images/CarneAssada.jpg')},
+    { id: '3', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚊𝚝𝚞𝚖', price: '$10', ingredients: 'Pão de forma, Atum, Cebola, Aipo, Alface', image: require('./assets/images/Atum.jpg')},
+    { id: '4', nome: '𝚆𝚛𝚊𝚙 𝚟𝚎𝚐𝚎𝚝𝚊𝚛𝚒𝚊𝚗𝚘 𝚌𝚘𝚖 𝚑𝚘𝚖𝚞𝚜', price: '$9', ingredients: 'Tortilhas de trigo integral, Alho, Azeite, Limão(suco), Tahine', image: require('./assets/images/Wrap.jpg')},
+    { id: '5', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚜𝚊𝚕𝚊𝚍𝚊 𝚍𝚎 𝚏𝚛𝚊𝚗𝚐𝚘', price: '$14', ingredients: 'Baguete, Peito de frango, Aipo, Nozes, Alface', image: require('./assets/images/SaladaFrango.jpg')},
+    { id: '6', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚙𝚎𝚛𝚗𝚒𝚕 𝚖𝚊𝚛𝚒𝚗𝚊𝚍𝚘', price: '$13', ingredients: 'Baguete, Lombo de porco, Alho, Páprica, Orégano', image: require('./assets/images/Pernil.jpg')},
+    { id: '7', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚙𝚎𝚒𝚝𝚘 𝚍𝚎 𝚙𝚎𝚛𝚞', price: '$13', ingredients: 'Pão de forma, Peito de peru, Cebola roxa, Queijo mussarela, Tomate', image: require('./assets/images/Peru.jpg')},
+    { id: '8', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚌𝚘𝚜𝚝𝚎𝚕𝚊 𝚍𝚎 𝚙𝚘𝚛𝚌𝚘 𝚌𝚘𝚖 𝚋𝚊𝚛𝚋𝚎𝚌𝚞𝚎', price: '$14', ingredients: 'Pão de hambúrguer, Costela de porco, Repolho, Molho barbecue, Cebola', image: require('./assets/images/Barbecue.jpg')},
+    { id: '9', nome: '𝙱𝙻𝚃', price: '$9', ingredients: 'Pão de forma, Bacon, Alface, Tomate, Pimenta', image: require('./assets/images/BLT.jpg')},
+    { id: '10', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚏𝚛𝚊𝚗𝚐𝚘 𝚐𝚛𝚎𝚕𝚑𝚊𝚍𝚘', price: '$10', ingredients: 'Ciabatta, Peito de frango, Tomate, Alface, Cebola roxa', image: require('./assets/images/FrangoGrelhado.jpg')},
+    { id: '11', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚊𝚋𝚊𝚌𝚊𝚝𝚎', price: '$10', ingredients: 'Pão de forma, Abacate, Alface, Queijo branco, Tomate', image: require('./assets/images/Abacate.jpg')},
+    { id: '12', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚘𝚟𝚘 𝚎 𝚋𝚊𝚌𝚘𝚗', price: '$8', ingredients: 'Pão de hambúrguer, Ovo, Bacon, Queijo mussarela, Manteiga', image: require('./assets/images/OvoBacon.jpg')},
+    { id: '13', nome: '𝙲𝚑𝚎𝚎𝚜𝚎𝚋𝚞𝚛𝚐𝚎𝚛', price: '$8', ingredients: 'Pão de hambúrguer, Quijo cheddar, Cebola roxa, Carne de hambúrguer, Picles', image: require('./assets/images/CheeseBurguer.jpg')},
+    { id: '14', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚍𝚎 𝚏𝚊𝚕𝚊𝚏𝚎𝚕', price: '$11', ingredients: 'Pão folha, Alface, Tomate, Pepino, Cebola roxa', image: require('./assets/images/Falafel.jpg')},
+    { id: '15', nome: '𝚂𝚊𝚗𝚍𝚞í𝚌𝚑𝚎 𝚌𝚊𝚙𝚛𝚎𝚜𝚎', price: '$13', ingredients: 'Pão italiano, Mussarela de búfala, Tomate, Manjericão, Azeite', image: require('./assets/images/Caprese.jpg')},
 ];
 
 const renderItem = ({ item }: { item: Item }) => (
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
         borderBottomEndRadius:22
     },
     text1: {
-        fontSize: 30,
+        fontSize: 25,
         fontWeight: '700',
         color: 'red',
         borderBottomWidth:2,
