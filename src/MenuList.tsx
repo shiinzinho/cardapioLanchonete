@@ -29,12 +29,13 @@ const dados: Item[] = [
 
 const renderItem = ({ item }: { item: Item }) => (
     <TouchableOpacity style={styles.item}>
-        <Text style={styles.Text1}>{item.nome}</Text>
+        <Text style={styles.text1}>{item.nome}</Text>
         <View>
-        <Text style={styles.Text2}>{item.price}</Text>
+        <Text style={styles.text2}>{item.price}</Text>
         </View>
-        <Text style={styles.Text3}>{item.ingredients}</Text>
-        <Image source={item.image} style={styles.ImageIcon}></Image>
+        <Text style={styles.text3}>{item.ingredients}</Text>
+        <Image source={item.image} style={styles.imageIcon}></Image>
+        <TouchableOpacity><Image source={require('./assets/images/addCart.png')} style={styles.add}></Image></TouchableOpacity>
     </TouchableOpacity>
 );
 
@@ -45,7 +46,7 @@ function MenuList(): React.JSX.Element {
              <ImageBackground source={require('./assets/images/menu.png')} style={styles.imageBackground}>
             <StatusBar backgroundColor='#ec3424' barStyle='light-content' />
             <View style={styles.header}>
-                <Image source={require('./assets/images/lacerda.png')} style={styles.ImageHeader}></Image>
+                <Image source={require('./assets/images/lacerda.png')} style={styles.imageHeader}></Image>
             </View>
             <FlatList
             showsVerticalScrollIndicator={false}
@@ -108,20 +109,20 @@ const styles = StyleSheet.create({
         borderBottomStartRadius:22,
         borderBottomEndRadius:22
     },
-    Text1: {
+    text1: {
         fontSize: 30,
         fontWeight: '700',
         color: 'red',
         borderBottomWidth:2,
         borderBottomColor: 'red',
     },
-    Text2: {
+    text2: {
         marginTop:4,
         fontSize: 20,
         fontWeight: '500',
         color: 'yellow',
     },
-    Text3: {
+    text3: {
         marginTop:8,
         fontSize: 15,
         fontWeight: 'bold',
@@ -144,13 +145,14 @@ const styles = StyleSheet.create({
         width: 30,
         height: 30
     },
-    ImageIcon: {
+    imageIcon: {
         marginTop: 15,
         width: 320,
         height: 150,
         borderRadius: 20,
         borderColor: 'red',
-        borderWidth: 2
+        borderWidth: 2,
+        marginBottom:20
         
     },
     imageBackground: {
@@ -159,9 +161,14 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
       },
-      ImageHeader: {
+      imageHeader: {
         width: 320,
         height: 150,
+      },
+      add: {
+        width: 40,
+        height: 40,
+        marginStart: '43%'
       }
 }
 );
