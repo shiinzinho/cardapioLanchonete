@@ -27,16 +27,14 @@ const dados: Item[] = [
 ];
 
 const renderItem = ({ item }: { item: Item }) => (
-    <TouchableOpacity style={styles.item}>
+    <View style={styles.item}>
         <Text style={styles.text1}>{item.nome}</Text>
-        <View>
-        </View>
         <Image source={item.image} style={styles.imageIcon}></Image>
         <TouchableOpacity><Image source={require('../assets/images/subtract.png')} style={styles.subtractIcon}></Image></TouchableOpacity>
         <Text style={styles.text2}>{item.qtd}</Text>
         <TouchableOpacity><Image source={require('../assets/images/addItem.png')} style={styles.addIcon}></Image></TouchableOpacity>
 
-    </TouchableOpacity>
+    </View>
 );
 
 function Cart(): React.JSX.Element {

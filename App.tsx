@@ -5,7 +5,7 @@ import Cart from "./src/snackBar/Cart";
 
 function App(): React.JSX.Element {
   return(
-    <Cart />
+    <MenuList />
   );
 }
 export default App;

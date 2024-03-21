@@ -28,7 +28,7 @@ const dados: Item[] = [
 ];
 
 const renderItem = ({ item }: { item: Item }) => (
-    <TouchableOpacity style={styles.item}>
+    <View style={styles.item}>
         <Text style={styles.text1}>{item.nome}</Text>
         <View>
         <Text style={styles.text2}>{item.price}</Text>
@@ -36,7 +36,7 @@ const renderItem = ({ item }: { item: Item }) => (
         <Text style={styles.text3}>{item.ingredients}</Text>
         <Image source={item.image} style={styles.imageIcon}></Image>
         <TouchableOpacity><Image source={require('../assets/images/addCart.png')} style={styles.add}></Image></TouchableOpacity>
-    </TouchableOpacity>
+    </View>
 );
 
 function MenuList(): React.JSX.Element {
