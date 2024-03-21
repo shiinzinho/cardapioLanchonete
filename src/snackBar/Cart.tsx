@@ -32,9 +32,9 @@ const renderItem = ({ item }: { item: Item }) => (
         <View>
         </View>
         <Image source={item.image} style={styles.imageIcon}></Image>
-        <TouchableOpacity><Image source={require('../assets/images/addItem.png')} style={styles.addIcon}></Image></TouchableOpacity>
-        <Text style={styles.text2}>{item.qtd}</Text>
         <TouchableOpacity><Image source={require('../assets/images/subtract.png')} style={styles.subtractIcon}></Image></TouchableOpacity>
+        <Text style={styles.text2}>{item.qtd}</Text>
+        <TouchableOpacity><Image source={require('../assets/images/addItem.png')} style={styles.addIcon}></Image></TouchableOpacity>
 
     </TouchableOpacity>
 );
@@ -128,17 +128,6 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         color: 'yellow',
     },
-    text3: {
-        marginTop:8,
-        fontSize: 15,
-        fontWeight: 'bold',
-        color: 'white'
-    },
-    headerText: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: 'black'
-    },
     footer: {
         borderTopWidth: 0.2,
         backgroundColor: 'black',
@@ -147,13 +136,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 10
     },
-    addIcon: {
+    subtractIcon: {
         width: 31,
         height: 31,
         marginLeft: 107,
         
     },
-    subtractIcon: {
+    addIcon: {
         width: 30,
         height: 30,
         marginLeft: 167,
@@ -179,11 +168,6 @@ const styles = StyleSheet.create({
       imageHeader: {
         width: 320,
         height: 150,
-      },
-      add: {
-        width: 40,
-        height: 40,
-        marginStart: '43%'
       },
       footerIcon: {
         width: 30,
