@@ -105,6 +105,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 1,
         paddingHorizontal: 40,
+        borderBottomStartRadius:22,
+        borderBottomEndRadius:22
     },
     Text1: {
         fontSize: 30,
@@ -148,7 +150,8 @@ const styles = StyleSheet.create({
         height: 150,
         borderRadius: 20,
         borderColor: 'red',
-        borderWidth: 1
+        borderWidth: 2
+        
     },
     imageBackground: {
         flex: 1,
