@@ -94,7 +94,9 @@ const styles = StyleSheet.create({
         padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
-        borderRadius: 25
+        borderRadius: 25,
+        borderColor: 'red',
+        borderWidth: 2
     },
     header: {
         backgroundColor: '#000',
@@ -138,7 +140,9 @@ const styles = StyleSheet.create({
         marginTop: 20,
         width: 320,
         height: 150,
-        borderRadius: 20
+        borderRadius: 20,
+        borderColor: 'red',
+        borderWidth: 1
     },
     imageBackground: {
         flex: 1,
