@@ -109,14 +109,18 @@ const styles = StyleSheet.create({
     Text1: {
         fontSize: 30,
         fontWeight: '700',
-        color: 'red'
+        color: 'red',
+        borderBottomWidth:2,
+        borderBottomColor: 'red',
     },
     Text2: {
+        marginTop:4,
         fontSize: 20,
         fontWeight: '500',
         color: 'yellow'
     },
     Text3: {
+        marginTop:8,
         fontSize: 15,
         fontWeight: 'bold',
         color: 'white'
@@ -139,7 +143,7 @@ const styles = StyleSheet.create({
         height: 30
     },
     ImageIcon: {
-        marginTop: 20,
+        marginTop: 15,
         width: 320,
         height: 150,
         borderRadius: 20,
