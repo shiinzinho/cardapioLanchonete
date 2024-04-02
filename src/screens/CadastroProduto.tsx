@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Image, StatusBar, StyleSheet, Text, TextInput, View } from "react-native";
+import { Image, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 const CadastroProduto: React.FC = () => {
     const [produtos, setProdutos] = useState<Produto[]>([]);
@@ -40,6 +40,15 @@ const CadastroProduto: React.FC = () => {
                 <View style={styles.alinhamentoImagemSelecionada}>
                     {imagem? <Image source={{uri: imagem}} style={styles.imagemSelecionada} /> : null}
                 </View>
+                <TouchableOpacity style={styles.imageButton}>
+                    <Text style={styles.imageButtonText}>Selecionar Imagem</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.imageButton}>
+                    <Text style={styles.imageButtonText}>Tirar Foto</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttonText}>Cadastrar Produto</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );
