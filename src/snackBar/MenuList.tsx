@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
       add: {
         width: 40,
         height: 40,
-        marginStart: '43%'
+        marginStart: 138.5,
       }
 }
 );
