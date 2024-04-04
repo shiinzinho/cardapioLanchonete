@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Image, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-import { launchCamera } from "react-native-image-picker";
+import { launchCamera, launchImageLibrary } from "react-native-image-picker";
+import axios from "axios";
 
 const CadastroProduto: React.FC = () => {
     const [produtos, setProdutos] = useState<Produto[]>([]);
@@ -10,7 +11,25 @@ const CadastroProduto: React.FC = () => {
     const [imagem, setImagem] = useState<any>('');
 
     const cadastrarProduto = async () => {
+        try {
+        const formData = new FormData();
+        formData.append('nome', nome);
+        formData.append('preco', preco);
+        formData.append('ingredientes', ingredientes);
+        formData.append('imagem', {
+            uri: imagem,
+            type: 'imagem/jpeg',
+            name: new Date() + '.jpg'
+        });
 
+        const response = await axios.post ('http://10.137.11.208:8000/api/produtos', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        });
+    } catch(error){
+        console.log(error);
+    }
     }
 
     const abrirCamera = () => {
@@ -20,19 +39,41 @@ const CadastroProduto: React.FC = () => {
             maxHeight: 2000,
             maxWidth: 2000
         };
-        launchCamera (options, response => {
-            if(response.didCancel){
+        launchCamera(options, response => {
+            if (response.didCancel) {
                 console.log('cancelado pelo usuário');
-            } else if(response.error) {
+            } else if (response.error) {
                 console.log('erro ao abrir a câmera');
             } else {
                 let imagemUri = response.uri || response.assets?.[0]?.uri;
                 setImagem(imagemUri);
                 console.log(imagemUri);
-                
+
             }
         });
     }
+
+    const selecionarImagem = () => {
+        const options = {
+            mediatype: 'photo',
+            includeBase64: false,
+            maxHeight: 2000,
+            maxWidth: 2000
+        };
+
+        launchImageLibrary(options, (response) => {
+            if (response.didCancel) {
+                console.log('cancelado pelo usuário');
+            } else if (response.error) {
+                console.log('erro ao abrir a galeria');
+            } else {
+                let imagemUri = response.uri || response.assets?.[0]?.uri;
+                setImagem(imagemUri);
+            }
+        });
+    }
+
+
 
     return (
         <View style={styles.container}>
@@ -61,15 +102,15 @@ const CadastroProduto: React.FC = () => {
                     multiline
                 />
                 <View style={styles.alinhamentoImagemSelecionada}>
-                    {imagem? <Image source={{uri: imagem}} style={styles.imagemSelecionada} /> : null}
+                    {imagem ? <Image source={{ uri: imagem }} style={styles.imagemSelecionada} /> : null}
                 </View>
-                <TouchableOpacity style={styles.imageButton}>
+                <TouchableOpacity style={styles.imageButton} onPress={selecionarImagem}>
                     <Text style={styles.imageButtonText}>Selecionar Imagem</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.imageButton} onPress={abrirCamera}>
                     <Text style={styles.imageButtonText}>Tirar Foto</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={cadastrarProduto}>
                     <Text style={styles.buttonText}>Cadastrar Produto</Text>
                 </TouchableOpacity>
             </View>
